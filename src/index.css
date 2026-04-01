@@ -95,17 +95,39 @@
     transition: all 0.4s ease;
   }
 
-  .noise-bg::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.4;
-  }
-
   .opacity-0-init {
     opacity: 0;
+  }
+
+  /* Hide scrollbar but keep scroll */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Range input thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    margin-top: -5.5px;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    height: 3px;
+    border-radius: 2px;
+    outline: none;
   }
 }
