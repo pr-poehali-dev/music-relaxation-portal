@@ -8,7 +8,7 @@ const SITE_URL = "https://music-relaxation-portal--preview.poehali.dev";
 export default function QRCodeModal() {
   const [open, setOpen] = useState(false);
 
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&bgcolor=080810&color=a855f7&data=${encodeURIComponent(SITE_URL)}`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&bgcolor=ffffff&color=4f1d96&data=${encodeURIComponent(SITE_URL)}`;
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function QRCodeModal() {
               </span>
             </div>
 
-            <div className="p-3 rounded-2xl bg-[#080810] border border-white/8">
+            <div className="p-3 rounded-2xl bg-white">
               <img
                 src={qrUrl}
                 alt="QR-код сайта"
