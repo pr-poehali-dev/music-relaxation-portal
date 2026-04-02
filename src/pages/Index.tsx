@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Icon from "@/components/ui/icon";
 import MiniPlayer from "@/components/MiniPlayer";
 import TrackCard from "@/components/TrackCard";
+import QRCodeModal from "@/components/QRCodeModal";
 import { CATEGORIES, PLAYLISTS, TRACKS, Track, useInView } from "@/data/musicData";
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
@@ -74,15 +75,18 @@ export default function Index() {
             ))}
           </div>
 
-          <a
-            href="https://www.youtube.com/results?search_query=relaxing+music"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/6 hover:bg-white/10 text-sm text-white/60 hover:text-white transition-all duration-200 border border-white/8"
-          >
-            <Icon name="ExternalLink" size={14} />
-            <span className="hidden sm:block">Открыть плейлист</span>
-          </a>
+          <div className="flex items-center gap-2">
+            <QRCodeModal />
+            <a
+              href="https://www.youtube.com/results?search_query=relaxing+music"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/6 hover:bg-white/10 text-sm text-white/60 hover:text-white transition-all duration-200 border border-white/8"
+            >
+              <Icon name="ExternalLink" size={14} />
+              <span className="hidden sm:block">Открыть плейлист</span>
+            </a>
+          </div>
         </div>
       </nav>
 
