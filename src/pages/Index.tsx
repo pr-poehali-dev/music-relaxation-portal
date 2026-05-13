@@ -264,7 +264,7 @@ export default function Index() {
             {
               icon: "Clock",
               color: "#667EEA",
-              title: "Помидор + музыка",
+              title: "Ритм работы и отдыха",
               text: "25 минут фокуса + 5 минут отдыха. Под lo-fi это работает вдвое эффективнее.",
             },
             {
